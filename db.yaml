@@ -48,3 +48,8 @@
     ansible.builtin.debug:
       msg: "Root password is already set, skipping password setup"
       when: mysql_connection_output.failed is false   
+
+  - name: Print message if password is already set
+    ansible.builtin.debug:
+      msg: "Root password is already set, skipping password setup"
+      when: mysql_connection_output.failed is false       
