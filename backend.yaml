@@ -59,8 +59,8 @@
 
   - name: import data into mysql
     community.mysql.mysql_db:
-      login_user: "{{ valut_mysql_user }}"
-      login_password: "{{ valut_mysql_password }}"
+      login_user: "{{ vault_mysql_user }}"
+      login_password: "{{ vault_mysql_password }}"
       login_host: "{{ login_host }}"
       target: /app/schema/backend.sql
       state: import
