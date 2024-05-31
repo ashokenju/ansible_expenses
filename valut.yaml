@@ -1,0 +1,3 @@
+---
+vault_mysql_user: ENC(root)  # Encrypted root username
+vault_mysql_password: ENC(ExpenseApp@1) # Encrypted root password

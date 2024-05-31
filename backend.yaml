@@ -2,8 +2,8 @@
   become: yes
   hosts: backend
   vars:
-    login_host: backend.devopenju9.site
-    login_password: ExpenseApp@1
+    #login_host: backend.devopenju9.site
+    #login_password: ExpenseApp@1
   tasks:
   - name: disable default nodejs
     ansible.builtin.command: dnf module disable nodejs -y
@@ -58,8 +58,8 @@
 
   - name: import data into mysql
     community.mysql.mysql_db:
-      login_user: root
-      login_password: "{{ login_password }}"
+      login_user: "{{ valut_login_username }}"
+      login_password: "{{ valut_login_password }}"
       login_host: "{{ login_host }}"
       target: /app/schema/backend.sql
       state: import
