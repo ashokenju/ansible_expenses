@@ -2,6 +2,7 @@
   become: yes
   hosts: backend
   vars:
+     login_host: backend.devopenju9.site
     #login_host: backend.devopenju9.site
     #login_password: ExpenseApp@1
   tasks:
