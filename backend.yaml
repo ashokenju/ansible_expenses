@@ -1,13 +1,11 @@
 - name: configure backend server
   become: yes
   hosts: backend
+  
   vars:
-    login_host: db.daws78s.online
-    login_password: ExpenseApp@1
-  vars:
+     
      login_host: backend.devopenju9.site
-    #login_host: backend.devopenju9.site
-    #login_password: ExpenseApp@1
+     login_password: ExpenseApp@1
   tasks:
   - name: disable default nodejs
     ansible.builtin.command: dnf module disable nodejs -y
